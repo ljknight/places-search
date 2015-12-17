@@ -1,0 +1,22 @@
+{
+  "name": "google-places-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljknight/places-search.git"
+  },
+  "author": "Laura Knight",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljknight/places-search/issues"
+  },
+  "homepage": "https://github.com/ljknight/places-search#readme",
+  "dependencies": {
+    "angular": "^1.4.8",
+  }
+}
