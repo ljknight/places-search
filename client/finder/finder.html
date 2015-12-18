@@ -1,0 +1,23 @@
+<div>
+  <header>
+    <h1>Google Places Search</h1>
+  </header>
+  <div class="input-container">
+    <h3>Search for a place</h3>
+    <h5>Try: "Cafes in San Francisco," "Bars near 16th and Guerrero," or "Zenefits HQ"</h5>
+    <input id="place-input" type="text" placeholder="Search for a place">
+    <div class="button-container">
+      <button ng-click='submit()'>Search</button>
+    </div>
+  </div>
+  <div id="map">
+    <!-- <ul>
+      <li id="result" ng-repeat="result in results">
+          <div class="name">{{ result.name }}</div>
+          <div class="address">{{ result.formatted_address }}</div>
+          <div class="rating">{{ result.rating }}</div>
+      </li>
+    </ul> -->
+  </div>
+  <div id="places"></div>
+</div>
