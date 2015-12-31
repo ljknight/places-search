@@ -1,4 +1,4 @@
-<div>
+<div id="finder">
   <header>
     <h1>Google Places Search</h1>
   </header>
@@ -12,12 +12,12 @@
   </div>
   <div id="map"></div>
   <ul>
-    <li ng-repeat="result in results">
+    <li ng-repeat="result in results track by $index">
       <div class="name">{{ result.name }}</div>
       <div class="address">{{ result.formatted_address }}</div>
       <div class="rating">{{ result.rating }}</div>
     </li>
   </ul>
   <div id="places"></div>
-  <!-- <button class="more">More</button> -->
+  <button id="more" ng-if="more">More</button>
 </div>
