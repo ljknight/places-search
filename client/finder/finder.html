@@ -1,10 +1,12 @@
 <div id="finder">
   <header>
-    <h1>Google Places Search</h1>
+    <div class="header-container">
+      <h1>Google Places Search</h1>
+      <h3>Search for a place</h3>
+      <h5>Try: "Cafes in San Francisco," "Bars near 16th and Guerrero," or "Zenefits"</h5>
+    </div>
   </header>
   <div class="input-container">
-    <h3>Search for a place</h3>
-    <h5>Try: "Cafes in San Francisco," "Bars near 16th and Guerrero," or "Zenefits"</h5>
     <form>
       <input id="place-input" type="text" ng-model="place" placeholder="Search for a place">
       <button type="submit" ng-click="submit()">Search</button>
@@ -16,6 +18,7 @@
       <div class="name">{{ result.name }}</div>
       <div class="address">{{ result.formatted_address }}</div>
       <div class="rating">{{ result.rating }}</div>
+      <div class="photo"><img ng-src="{{ result.photos[0].getUrl({'maxHeight': 100, 'maxWidth': 100}) }}"/> </div>
     </li>
   </ul>
   <div id="places"></div>

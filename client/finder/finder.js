@@ -39,6 +39,7 @@ angular.module('places.finder', [])
     };
 
     var processResults = function(results, status, pagination) {
+      console.log(results)
       if (status !== google.maps.places.PlacesServiceStatus.OK) {
         return;
       } else {

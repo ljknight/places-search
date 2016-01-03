@@ -1,11 +1,94 @@
-#map {
-  height: 500px;
-  width: 500px;
+/* ======= App-wide ======= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/ProximaNova-Reg.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/ProximaNova-Sbold.otf');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/ProximaNova-Xbold.otf');
+  font-style: normal;
+  font-weight: 900;
 }
 
 #finder {
   height: 100%;
   width: 100%;
+}
+
+/* ======= Header ======= */
+
+header {
+  background-color: #1c2333;
+  color: #fff;
+  padding: 3em 0;
+  width: 100%;
+}
+
+.header-container {
+  margin: 0 auto;
+  width: 60%;
+}
+
+h1 {
+  border-bottom: 1px solid #fff;
+  font-size: 3em;
+  font-weight: 900;
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+
+h3, h5 {
+  display: inline-block;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+h5 {
+  font-weight: 400;
+  margin-left: 2em;
+}
+
+/* ======= Input, Map & Results ======= */
+
+input, button {
+  border: 1px solid #999;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1%;
+  min-height: 2em;
+  padding: 0.5em 1em;
+}
+
+input {
+  margin-right: 1.5%;
+}
+
+#map {
+  height: 500px;
+  margin: 0 auto;
+  width: 700px;
 }
 
 
