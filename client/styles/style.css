@@ -34,61 +34,97 @@ body {
   width: 100%;
 }
 
+.content-container {
+  margin: 0 auto;
+  width: 60%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 /* ======= Header ======= */
 
 header {
   background-color: #1c2333;
   color: #fff;
-  padding: 3em 0;
+  padding: 4em 0;
   width: 100%;
 }
 
-.header-container {
-  margin: 0 auto;
-  width: 60%;
-}
-
-h1 {
+header h1 {
   border-bottom: 1px solid #fff;
   font-size: 3em;
   font-weight: 900;
-  margin: 0;
   padding-bottom: 0.5em;
 }
 
-h3, h5 {
-  display: inline-block;
+header h1, h3, h5 {
+  margin: 0;
 }
 
-h3 {
+header h3, h5 {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+header h3 {
   font-size: 1.5em;
   font-weight: 600;
+  margin-right: 2em;
 }
 
-h5 {
+header h5 {
   font-weight: 400;
-  margin-left: 2em;
 }
 
-/* ======= Input, Map & Results ======= */
+/* ======= Input & Map ======= */
 
-input, button {
-  border: 1px solid #999;
-  border-radius: 5px;
+.input-container {
+  margin: 4em 0 2em;
+  width: 100%;
+}
+
+.input-container input, button {
   display: inline-block;
-  margin-top: 1%;
-  min-height: 2em;
-  padding: 0.5em 1em;
+  height: 2.5em;
 }
 
-input {
-  margin-right: 1.5%;
+.input-container input {
+  border: 1px solid #c3c3c3;
+  padding: 0.5em 1em;
+  width: 80%;
+}
+
+.input-container button {
+  background-color: #479eff;
+  border: 0;
+  color: #fff;
+  float: right;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 18%;
 }
 
 #map {
   height: 500px;
-  margin: 0 auto;
-  width: 700px;
+  margin: 0 auto 6em;
+  width: 100%;
 }
 
+/* ======= Results ======= */
 
+.results-container {
+  background-color: #f9f9f9;
+}
+
+/* Prevents padding from displaying pre-search */
+.results-container li:first-child{
+  padding-top: 4em;
+}
+
+.results-container .icon img {
+  height: 20px;
+  width: 20px;
+}

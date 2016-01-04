@@ -1,26 +1,32 @@
 <div id="finder">
   <header>
-    <div class="header-container">
+    <div class="content-container">
       <h1>Google Places Search</h1>
       <h3>Search for a place</h3>
       <h5>Try: "Cafes in San Francisco," "Bars near 16th and Guerrero," or "Zenefits"</h5>
     </div>
   </header>
-  <div class="input-container">
-    <form>
-      <input id="place-input" type="text" ng-model="place" placeholder="Search for a place">
-      <button type="submit" ng-click="submit()">Search</button>
-    </form>
+  <div class="content-container">
+    <div class="input-container">
+      <form>
+        <input id="place-input" type="text" ng-model="place" placeholder="Search for a place">
+        <button type="submit" ng-click="submit()">Search</button>
+      </form>
+    </div>
+    <div id="map"></div>
   </div>
-  <div id="map"></div>
-  <ul>
-    <li ng-repeat="result in results track by $index">
-      <div class="name">{{ result.name }}</div>
-      <div class="address">{{ result.formatted_address }}</div>
-      <div class="rating">{{ result.rating }}</div>
-      <div class="photo"><img ng-src="{{ result.photos[0].getUrl({'maxHeight': 100, 'maxWidth': 100}) }}"/> </div>
-    </li>
-  </ul>
-  <div id="places"></div>
-  <button id="more" ng-if="more">More</button>
+    <div class="results-container">
+      <div class="content-container">
+      <ul>
+        <li ng-repeat="result in results track by $index">
+          <div class="photo"><img ng-src="{{ result.photos[0].getUrl({'maxHeight': 100, 'maxWidth': 100}) }}"/></div>
+          <div class="name">{{ result.name }}</div>
+          <div class="price">{{ result.price_level }}</div>
+          <div class="icon"><img ng-src="{{ result.icon }}"/></div>
+          <div class="rating">{{ result.rating }}</div>
+          <div class="address">{{ result.formatted_address }}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
