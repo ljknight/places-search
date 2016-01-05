@@ -38,31 +38,43 @@ angular.module('places.finder', [])
       initMap();
     };
 
+    var formatType = function(input, index) {
+      var type = input.types[0];
+      
+      type = type.charAt(0).toUpperCase() + type.slice(1);
+      type = type.replace(/[_]/g, " "); 
+
+      $scope.results[index].type = type;
+    };
+
+    var createStars = function(input, index) {
+      var val = Math.floor(input.rating);
+      var stars = '';
+
+      for (var i = 0; i < val; i++) {
+        stars += '★';  
+      }
+
+      while (stars.length < 5) {
+        stars += '☆';
+      }
+
+      $scope.results[index].stars = stars;
+    };
+
     var processResults = function(results, status, pagination) {
-      console.log(results)
       if (status !== google.maps.places.PlacesServiceStatus.OK) {
         return;
       } else {
         for (var i = 0; i < results.length; i++) {
           $scope.results.push(results[i]);
+          $scope.results[i].count = i+1;
+          formatType(results[i], i);
+          createStars(results[i], i);
           // Force digest to render list
           $scope.$apply();
           createMarkers(results[i]);
         }
-
-        // if (pagination.hasNextPage) {
-        //   $scope.more = true;
-        //   // Force digest to render button
-        //   $scope.$apply();
-
-        //   var moreButton = document.getElementById('more');
-
-        //   moreButton.addEventListener('click', function() {
-        //     pagination.nextPage();
-        //   });
-        // } else {
-        //   $scope.more = false;
-        // }
       }
     };
 

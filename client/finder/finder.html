@@ -19,12 +19,15 @@
       <div class="content-container">
       <ul>
         <li ng-repeat="result in results track by $index">
-          <div class="photo"><img ng-src="{{ result.photos[0].getUrl({'maxHeight': 100, 'maxWidth': 100}) }}"/></div>
-          <div class="name">{{ result.name }}</div>
-          <div class="price">{{ result.price_level }}</div>
-          <div class="icon"><img ng-src="{{ result.icon }}"/></div>
-          <div class="rating">{{ result.rating }}</div>
-          <div class="address">{{ result.formatted_address }}</div>
+          <div class="info">
+            <div class="name">{{ result.name }}</div>
+            <span class="type">{{ result.type }}</span>
+            <span class="bullet">&bull;</span>
+            <span class="rating">{{ result.rating }}</span>
+            <span class="stars">{{ result.stars }}</span>
+            <div class="address">{{ result.formatted_address }}</div>
+          </div>
+          <span class="count">{{ result.count }}</span>
         </li>
       </ul>
     </div>
